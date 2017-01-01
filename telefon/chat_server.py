@@ -88,7 +88,7 @@ def chat_server():
 
                 # exception 
                 except:
-                    broadcast(server_socket, sock, "Client (%s, %s) is offline\n" % addr)
+                    #broadcast(server_socket, sock, "Client (%s, %s) is offline\n" % addr)
                     continue
 
     server_socket.close()
