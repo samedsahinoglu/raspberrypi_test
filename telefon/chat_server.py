@@ -66,12 +66,12 @@ def chat_server():
                             GPIO.output(ledPin3, GPIO.LOW)
                             GPIO.output(ledPin1, GPIO.HIGH)
                             
-                        else if data==2:
+                        elif data==2:
                             GPIO.output(ledPin1, GPIO.LOW)
                             GPIO.output(ledPin3, GPIO.LOW)
                             GPIO.output(ledPin2, GPIO.HIGH)
                             
-                        else if data==3:
+                        elif data==3:
                             GPIO.output(ledPin2, GPIO.LOW)
                             GPIO.output(ledPin1, GPIO.LOW)
                             GPIO.output(ledPin3, GPIO.HIGH)
