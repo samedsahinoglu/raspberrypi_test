@@ -77,7 +77,7 @@ def chat_server():
                             GPIO.output(ledPin3, GPIO.HIGH)
                             
                             
-			#broadcast(server_socket, sock, "\r" + '[' + str(sock.getpeername()) + '] ' + data)  
+			broadcast(server_socket, sock, "\r" + '[' + str(sock.getpeername()) + '] ' + data)  
                     else:
                         # remove the socket that's broken    
                         if sock in SOCKET_LIST:
@@ -88,7 +88,7 @@ def chat_server():
 
                 # exception 
                 except:
-                    #broadcast(server_socket, sock, "Client (%s, %s) is offline\n" % addr)
+                    broadcast(server_socket, sock, "Client (%s, %s) is offline\n" % addr)
                     continue
 
     server_socket.close()
