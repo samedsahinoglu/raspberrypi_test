@@ -51,7 +51,7 @@ def chat_server():
                 SOCKET_LIST.append(sockfd)
                 print "Client (%s, %s) connected" % addr
                  
-                broadcast(server_socket, sockfd, "[%s:%s] entered our chatting room\n" % addr)
+                #broadcast(server_socket, sockfd, "[%s:%s] entered our chatting room\n" % addr)
              
             # a message from a client, not a new connection
             else:
@@ -77,18 +77,18 @@ def chat_server():
                             GPIO.output(ledPin3, GPIO.HIGH)
                             
                             
-			broadcast(server_socket, sock, "\r" + '[' + str(sock.getpeername()) + '] ' + data)  
+			#broadcast(server_socket, sock, "\r" + '[' + str(sock.getpeername()) + '] ' + data)  
                     else:
                         # remove the socket that's broken    
                         if sock in SOCKET_LIST:
                             SOCKET_LIST.remove(sock)
 
                         # at this stage, no data means probably the connection has been broken
-                        broadcast(server_socket, sock, "Client (%s, %s) is offline\n" % addr) 
+                        #broadcast(server_socket, sock, "Client (%s, %s) is offline\n" % addr) 
 
                 # exception 
                 except:
-                    broadcast(server_socket, sock, "Client (%s, %s) is offline\n" % addr)
+                    #broadcast(server_socket, sock, "Client (%s, %s) is offline\n" % addr)
                     continue
 
     server_socket.close()
