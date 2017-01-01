@@ -35,18 +35,18 @@ try:
         #else: # button is pressed:
             #pwm.ChangeDutyCycle(100-dc)
         GPIO.output(ledPin1, GPIO.HIGH)
-        time.sleep(0.5)
+        time.sleep(0.2)
         GPIO.output(ledPin2, GPIO.HIGH)
-        time.sleep(0.5)
+        time.sleep(0.2)
         GPIO.output(ledPin3, GPIO.HIGH)
         time.sleep(0.5)
         time.sleep(0.5)
         GPIO.output(ledPin1, GPIO.LOW)
-        time.sleep(0.5)
+        time.sleep(0.2)
         GPIO.output(ledPin2, GPIO.LOW)
-        time.sleep(0.5)
+        time.sleep(0.2)
         GPIO.output(ledPin3, GPIO.LOW)
-        time.sleep(0.5)
+        time.sleep(0.2)
 except KeyboardInterrupt: # If CTRL+C is pressed, exit cleanly:
     #pwm.stop() # stop PWM
     GPIO.cleanup() # cleanup all GPIO
