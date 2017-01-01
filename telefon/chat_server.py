@@ -23,7 +23,7 @@ GPIO.setup(ledPin3, GPIO.OUT) # LED pin set as output
 
 GPIO.output(ledPin1, GPIO.LOW)
 GPIO.output(ledPin2, GPIO.LOW)
-GPIO.output(ledPin3, GPIO.LOW
+GPIO.output(ledPin3, GPIO.LOW)
 
             
 def chat_server():
