@@ -21,7 +21,9 @@ GPIO.setup(ledPin3, GPIO.OUT) # LED pin set as output
 #GPIO.setup(butPin, GPIO.IN, pull_up_down=GPIO.PUD_UP) # Button pin set as input w/ pull-up
 
 # Initial state for LEDs:
-GPIO.output(ledPin, GPIO.LOW)
+GPIO.output(ledPin1, GPIO.LOW)
+GPIO.output(ledPin2, GPIO.LOW)
+GPIO.output(ledPin3, GPIO.LOW)
 #pwm.start(dc)
 
 print("Here we go! Press CTRL+C to exit")
