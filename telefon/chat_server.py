@@ -61,21 +61,21 @@ def chat_server():
                     data = sock.recv(RECV_BUFFER)
                     if data:
                         # there is something in the socket
-                        if data==1:
+                        if data==1 or "1" in data:
                             GPIO.output(ledPin2, GPIO.LOW)
                             GPIO.output(ledPin3, GPIO.LOW)
                             GPIO.output(ledPin1, GPIO.HIGH)
                             
-                        elif data==2:
+                        elif data==2 or "2" in data:
                             GPIO.output(ledPin1, GPIO.LOW)
                             GPIO.output(ledPin3, GPIO.LOW)
                             GPIO.output(ledPin2, GPIO.HIGH)
                             
-                        elif data==3:
+                        elif data==3 or "3" in data:
                             GPIO.output(ledPin2, GPIO.LOW)
                             GPIO.output(ledPin1, GPIO.LOW)
                             GPIO.output(ledPin3, GPIO.HIGH)
-                            
+                        print data   
                             
 			#broadcast(server_socket, sock, "\r" + '[' + str(sock.getpeername()) + '] ' + data)  
                     else:
